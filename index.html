@@ -1,188 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Retro Product</title>
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Press Start 2P', cursive;
-      background-color: black;
-      color: white;
-      overflow: hidden;
-      position: relative;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Product Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: 'Press Start 2P', cursive;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
 
-    /* Sparkles */
-    .sparkle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      pointer-events: none;
-      background-image: radial-gradient(circle, #ff007f, #6a00f4, #00d4ff);
-      opacity: 0.6;
-      animation: sparkleEffect 1s infinite;
-    }
+        /* Background Animation */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            animation: backgroundMove 10s infinite linear;
+        }
 
-    @keyframes sparkleEffect {
-      0% { transform: scale(0.8); opacity: 0.5; }
-      50% { transform: scale(1.2); opacity: 0.7; }
-      100% { transform: scale(0.8); opacity: 0.5; }
-    }
+        @keyframes backgroundMove {
+            0% { background-color: black; }
+            50% { background-color: #2c2c2c; }
+            100% { background-color: black; }
+        }
 
-    /* Congrats Animation */
-    .congrats {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ff007f;
-      text-shadow: 0 0 30px #ff007f, 0 0 60px #ff00ff, 0 0 100px #ff00ff;
-      opacity: 0;
-      animation: popIn 1.5s ease-out, explode 1s ease-out forwards;
-      z-index: 10;
-      position: relative;
-    }
+        /* Sparkling Effects */
+        .sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            background-image: url('https://media.giphy.com/media/2JzXk5bsFEzgs/giphy.gif'); /* Sparkle GIF URL */
+            background-size: cover;
+            animation: sparkleAnimation 2s infinite;
+        }
 
-    @keyframes popIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+        @keyframes sparkleAnimation {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+            100% { opacity: 0.3; }
+        }
 
-    @keyframes explode {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(3); opacity: 0; }
-    }
+        /* Retro and Animated Text */
+        .thank-you {
+            text-align: center;
+            font-size: 40px;
+            color: #00d4ff;
+            opacity: 0;
+            animation: fadeIn 2s forwards, explodeText 1s 2s forwards;
+        }
 
-    /* Interactive Text Effect */
-    .interactive-text {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1.5rem;
-      line-height: 2.5rem;
-      text-align: center;
-      text-transform: uppercase;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
 
-    .interactive-text:hover {
-      transform: translateY(-5px) scale(1.1);
-      color: #6a00f4;
-    }
+        @keyframes explodeText {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.3); text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff007f; }
+        }
 
-    /* Button Styling */
-    .cool-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: linear-gradient(45deg, #ff007f, #6a00f4, #00d4ff);
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      text-shadow: 0 0 10px #ffffff;
-      text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
+        h1, h2, p {
+            font-family: 'Russo One', sans-serif;
+            animation: typewriter 4s steps(60) 1s forwards;
+            white-space: nowrap;
+            overflow: hidden;
+        }
 
-    .cool-button:hover {
-      transform: scale(1.1) rotate(-2deg);
-      box-shadow: 0 12px 40px rgba(255, 0, 127, 0.8);
-    }
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
 
-    /* Image Animation */
-    .image {
-      max-width: 80%;
-      margin-top: 20px;
-      border: 4px solid #6a00f4;
-      border-radius: 10px;
-      animation: fadeIn 2s ease-in-out;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-    }
+        /* Congratulations Animation */
+        .congratulations {
+            text-align: center;
+            font-size: 50px;
+            color: #ff007f;
+            opacity: 0;
+            animation: fadeIn 1s forwards, partyExplosion 1s 2s forwards;
+        }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+        @keyframes partyExplosion {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
 
-  </style>
+        /* Button Design */
+        .cool-button {
+            background: linear-gradient(45deg, #6a00f4, #ff00ff, #00d4ff);
+            color: white;
+            padding: 15px 35px;
+            font-size: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .cool-button:hover {
+            background: linear-gradient(45deg, #ff00ff, #6a00f4, #00d4ff);
+            transform: scale(1.1);
+        }
+
+        .cool-button:active {
+            transform: scale(1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .instructions, .tips {
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .tips ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tips ul li {
+            font-size: 22px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Sparkles Animation -->
-  <div class="sparkle"></div>
+    <!-- Background Animation -->
+    <div class="sparkles"></div>
 
-  <!-- Congrats -->
-  <div class="congrats">🎊🎉 Congratulations! 🎉🎊</div>
+    <!-- Thank You Text -->
+    <div class="thank-you">
+        Thank you for visiting! We appreciate you.
+    </div>
 
-  <!-- Image -->
-  <img src="https://i.imgur.com/PdlumFr.png" alt="Your Product" class="image">
+    <!-- Congratulations Text -->
+    <div class="congratulations">
+        🎉🎊 Congratulations! 🎊🎉
+    </div>
 
-  <!-- Sections for Text -->
-  <div class="interactive-text">
-    You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.
-  </div>
+    <!-- Image -->
+    <div class="image-container" style="text-align: center; margin-top: 30px;">
+        <img src="https://i.imgur.com/PdlumFr.png" alt="Product Image" style="width: 80%; height: auto; animation: fadeIn 1s;">
+    </div>
 
-  <div class="interactive-text">
-    WARNING ⚠️ This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!
-  </div>
+    <!-- Main Text -->
+    <h1>Your Awesome Product is Here!</h1>
+    <p>Welcome to your new world of amazing possibilities! 🎮</p>
 
-  <!-- Button -->
-  <a href="https://zefoy.com" class="cool-button" target="_blank">Boost Your TikTok Engagement Now</a>
+    <!-- Warning Message -->
+    <h2>⚠️ WARNING ⚠️</h2>
+    <p>This tool is powerful, so use it responsibly.</p>
 
-  <!-- Instructions -->
-  <div class="interactive-text">
-    <strong>How to Use:</strong>
-    <p>Use this tool to get more engagement on your TikTok account. Simply access the link and follow the instructions to maximize your views and interactions.</p>
-  </div>
+    <!-- Cool Phrase for Using -->
+    <h2>How to Get the Most Out of It:</h2>
+    <p>Unleash the full potential by following these simple steps and get ready for an unforgettable experience!</p>
 
-  <!-- Tips -->
-  <div class="interactive-text">
-    <strong>3 Tips for Better Results:</strong>
-    <ul>
-      <li>Ensure your content is fresh and follows trending topics.</li>
-      <li>Engage actively with your audience to build relationships.</li>
-      <li>Use relevant hashtags and stay consistent with posting.</li>
-    </ul>
-  </div>
+    <!-- Tips for Better Use -->
+    <div class="tips">
+        <h2>Tips for a Better Experience:</h2>
+        <ul>
+            <li>Use regularly to maximize benefits.</li>
+            <li>Share with friends for more fun!</li>
+            <li>Stay tuned for future updates!</li>
+        </ul>
+    </div>
 
-  <!-- Final Note -->
-  <div class="interactive-text">
-    <strong>Important!</strong>
-    <p>Use this tool responsibly and don't spam others. Your success depends on your strategy, so plan accordingly!</p>
-  </div>
+    <!-- Final Advice -->
+    <div class="final-advice">
+        <h2>Have an amazing journey! 😎</h2>
+        <p>We’re all in this together, but use it wisely!</p>
+    </div>
 
-  <!-- Final Message -->
-  <div class="interactive-text">
-    <strong>Final Note:</strong>
-    <p>I’m all yours now, so use me carefully. Have a blast, and let's make some magic happen! ⚡🎮</p>
-  </div>
+    <!-- Button -->
+    <div class="cool-button" onclick="window.location.href='YOUR_LINK_HERE'">
+        Start Your Journey Now
+    </div>
 
-  <!-- JavaScript for Sparkles -->
-  <script>
-    const body = document.body;
-    setInterval(() => {
-      const sparkle = document.createElement('div');
-      sparkle.style.position = 'fixed';
-      sparkle.style.left = Math.random() * window.innerWidth + 'px';
-      sparkle.style.top = Math.random() * window.innerHeight + 'px';
-      sparkle.style.width = '8px';
-      sparkle.style.height = '8px';
-      sparkle.style.background = 'radial-gradient(circle, #ff007f, transparent)';
-      sparkle.style.borderRadius = '50%';
-      sparkle.style.pointerEvents = 'none';
-      sparkle.style.animation = 'fadeOut 1.5s forwards';
-      document.body.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 1500);
-    }, 150);
-  </script>
 </body>
 </html>
