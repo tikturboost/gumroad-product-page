@@ -1,111 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Product Page</title>
-    <style>
-        /* Custom Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ff7eb3, #6a85ff);
-            animation: backgroundShift 8s infinite linear;
-            color: white;
-            text-align: center;
-            padding-top: 50px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Your New Retro World</title>
+  <style>
+    /* Background Animation */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif; /* Retro font */
+      background: linear-gradient(135deg, #000428, #1a1a3f, #020024);
+      background-size: 400% 400%;
+      animation: gradientShift 10s infinite;
+      color: #ffffff;
+      overflow: hidden;
+    }
 
-        h1, h2, p {
-            margin: 20px 0;
-        }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        ul {
-            list-style-type: disc;
-            margin: 20px auto;
-            padding: 0;
-            max-width: 600px;
-            text-align: left;
-        }
+    /* Animated Congrats Text */
+    .congrats {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff007f;
+      text-shadow: 0 0 20px #ff007f, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+      animation: popIn 1s ease-out, explode 1.5s infinite alternate;
+    }
 
-        li {
-            margin: 10px 0;
-        }
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
 
-        .cool-button {
-            display: inline-block;
-            padding: 16px 32px;
-            background: linear-gradient(45deg, #ff007f, #6a00f4, #00d4ff);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-            transform: translateY(0);
-        }
+    @keyframes explode {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px) scale(1.1); }
+    }
 
-        .cool-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        }
+    /* Image Styling */
+    .image {
+      margin: 20px 0;
+      max-width: 80%;
+      border: 4px solid #6a00f4;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+      border-radius: 12px;
+    }
 
-        .cool-button:active {
-            transform: translateY(2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+    /* Button Styling */
+    .cool-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #ff007f, #6a00f4, #00d4ff);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 0 8px #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease-in-out;
+      transform: perspective(1000px) translateZ(50px);
+    }
 
-        .cool-button:focus {
-            outline: none;
-        }
+    .cool-button:hover {
+      transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+      box-shadow: 0 12px 40px rgba(255, 0, 127, 0.8);
+    }
 
-        /* Background Animation */
-        @keyframes backgroundShift {
-            0% {
-                background-position: 0% 0%;
-            }
-            50% {
-                background-position: 100% 100%;
-            }
-            100% {
-                background-position: 0% 0%;
-            }
-        }
-    </style>
+    /* Footer Text */
+    .footer {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="congratulations-text">
-        <h1>🎉 Congratulations 🎉</h1>
-        <!-- Your Image -->
-        <img src="https://i.imgur.com/PdlumFr.png" alt="Celebration Image" style="max-width: 600px; width: 100%; margin: 20px 0; border-radius: 12px;">
-        <p>Thank you for trusting us 💜 and purchasing this exclusive product!</p>
-    </div>
-    <div class="tool-intro">
-        <p>You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.</p>
-        <p><strong>WARNING ⚠️</strong> This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!</p>
-        <!-- Zefoy Link -->
-        <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Your Engagement Now</a>
-    </div>
-    <div class="tool-usage">
-        <h2>How to Use the Tool Effectively:</h2>
-        <ul>
-            <li>Access the Exclusive Link: Click on the link you’ve received to unlock your gateway to TikTok success.</li>
-            <li>Choose Your Desired Engagement Type: Decide what you want to boost: views, likes, shares, saves, or even comment likes. The choice is yours.</li>
-            <li>Enter Your TikTok Video Link: Paste the link of the video you wish to enhance into the designated field.</li>
-            <li>Start the Process: Hit the “Submit” or “Boost Now” button, and let the magic happen.</li>
-            <li>Witness the Results: In just a few moments, watch as your video’s engagement skyrockets to new heights.</li>
-        </ul>
-        <h3>Pro Tips for Maximum Impact:</h3>
-        <ul>
-            <li>Use this tool strategically for your most valuable content.</li>
-            <li>Keep your usage balanced to maintain the authenticity of your growth.</li>
-            <li>Enjoy the competitive edge this exclusive tool provides!</li>
-        </ul>
-        <p><em>Your TikTok growth journey starts now. Use it wisely, and make every interaction count.</em></p>
-    </div>
+  <!-- Congrats Text -->
+  <div class="congrats">🎉 Welcome to the Retro Future! 🎉</div>
+
+  <!-- Image -->
+  <img src="https://i.imgur.com/PdlumFr.png" alt="Retro Image" class="image">
+
+  <!-- Button -->
+  <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Now</a>
+
+  <!-- Footer -->
+  <div class="footer">Keep this page safe. It’s your key to TikTok success.</div>
+
+  <script>
+    // JavaScript for Party Sparkles
+    const body = document.querySelector('body');
+    setInterval(() => {
+      const sparkle = document.createElement('div');
+      sparkle.style.position = 'fixed';
+      sparkle.style.left = Math.random() * window.innerWidth + 'px';
+      sparkle.style.top = Math.random() * window.innerHeight + 'px';
+      sparkle.style.width = sparkle.style.height = Math.random() * 10 + 5 + 'px';
+      sparkle.style.background = 'radial-gradient(circle, #ff007f, transparent)';
+      sparkle.style.borderRadius = '50%';
+      sparkle.style.pointerEvents = 'none';
+      sparkle.style.animation = 'fadeOut 1.5s forwards';
+      body.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), 1500);
+    }, 200);
+
+    // Sparkle Animation
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; transform: scale(2); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
