@@ -13,21 +13,43 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-family: 'Press Start 2P', cursive; /* Retro Pixel Font */
+      font-family: 'Press Start 2P', cursive;
       background-color: black;
-      color: #ffffff;
+      color: white;
       overflow: hidden;
       position: relative;
     }
 
-    /* Congrats Text */
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: radial-gradient(circle, #ff007f, #6a00f4, #00d4ff);
+      opacity: 0.6;
+      animation: sparkleEffect 1s infinite;
+    }
+
+    @keyframes sparkleEffect {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(0.8); opacity: 0.5; }
+    }
+
+    /* Congrats Animation */
     .congrats {
       font-size: 3rem;
       font-weight: bold;
       color: #ff007f;
       text-shadow: 0 0 30px #ff007f, 0 0 60px #ff00ff, 0 0 100px #ff00ff;
-      animation: popIn 1.5s ease-out, explode 1s ease-out forwards;
       opacity: 0;
+      animation: popIn 1.5s ease-out, explode 1s ease-out forwards;
+      z-index: 10;
+      position: relative;
     }
 
     @keyframes popIn {
@@ -40,32 +62,19 @@
       100% { transform: scale(3); opacity: 0; }
     }
 
-    /* Text Sections */
-    .section {
-      margin: 20px;
-      padding: 15px;
-      text-align: center;
+    /* Interactive Text Effect */
+    .interactive-text {
+      font-family: 'Press Start 2P', cursive;
       font-size: 1.5rem;
       line-height: 2.5rem;
-      border-top: 2px solid #6a00f4;
-      border-bottom: 2px solid #6a00f4;
-      opacity: 0;
-      animation: typeEffect 2s steps(40) forwards;
+      text-align: center;
+      text-transform: uppercase;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    /* Animation for Typing Effect */
-    @keyframes typeEffect {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    .section p {
-      font-family: 'Press Start 2P', cursive;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 4px solid #fff;
-      padding-right: 5px;
-      margin: 0;
+    .interactive-text:hover {
+      transform: translateY(-5px) scale(1.1);
+      color: #6a00f4;
     }
 
     /* Button Styling */
@@ -104,36 +113,10 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* Retro Effects for Text */
-    .retro-font {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1.2rem;
-      letter-spacing: 0.1rem;
-      color: white;
-    }
-
-    /* Sparkles */
-    .sparkle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      pointer-events: none;
-      background-image: radial-gradient(circle, #ff007f, #6a00f4, #00d4ff);
-      opacity: 0.6;
-      animation: sparkleEffect 1s infinite;
-    }
-
-    @keyframes sparkleEffect {
-      0% { transform: scale(0.8); opacity: 0.5; }
-      50% { transform: scale(1.2); opacity: 0.7; }
-      100% { transform: scale(0.8); opacity: 0.5; }
-    }
   </style>
 </head>
 <body>
+
   <!-- Sparkles Animation -->
   <div class="sparkle"></div>
 
@@ -141,26 +124,28 @@
   <div class="congrats">🎊🎉 Congratulations! 🎉🎊</div>
 
   <!-- Image -->
-  <img src="https://i.imgur.com/PdlumFr.png" alt="Retro Image" class="image">
+  <img src="https://i.imgur.com/PdlumFr.png" alt="Your Product" class="image">
 
   <!-- Sections for Text -->
-  <div class="section retro-font">
+  <div class="interactive-text">
     You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.
   </div>
-  <div class="section retro-font">
+
+  <div class="interactive-text">
     WARNING ⚠️ This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!
   </div>
 
   <!-- Button -->
   <a href="https://zefoy.com" class="cool-button" target="_blank">Boost Your TikTok Engagement Now</a>
 
-  <!-- Instructions & Tips -->
-  <div class="section retro-font">
+  <!-- Instructions -->
+  <div class="interactive-text">
     <strong>How to Use:</strong>
     <p>Use this tool to get more engagement on your TikTok account. Simply access the link and follow the instructions to maximize your views and interactions.</p>
   </div>
 
-  <div class="section retro-font">
+  <!-- Tips -->
+  <div class="interactive-text">
     <strong>3 Tips for Better Results:</strong>
     <ul>
       <li>Ensure your content is fresh and follows trending topics.</li>
@@ -169,13 +154,14 @@
     </ul>
   </div>
 
-  <div class="section retro-font">
+  <!-- Final Note -->
+  <div class="interactive-text">
     <strong>Important!</strong>
     <p>Use this tool responsibly and don't spam others. Your success depends on your strategy, so plan accordingly!</p>
   </div>
 
   <!-- Final Message -->
-  <div class="section retro-font">
+  <div class="interactive-text">
     <strong>Final Note:</strong>
     <p>I’m all yours now, so use me carefully. Have a blast, and let's make some magic happen! ⚡🎮</p>
   </div>
