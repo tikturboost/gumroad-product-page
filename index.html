@@ -14,17 +14,10 @@
       align-items: center;
       justify-content: center;
       font-family: 'Press Start 2P', cursive; /* Retro Pixel Font */
-      background: linear-gradient(135deg, #000000, #1a1a3f, #330033);
-      background-size: 400% 400%;
-      animation: gradientMove 8s infinite;
+      background-color: black;
       color: #ffffff;
       overflow: hidden;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      position: relative;
     }
 
     /* Congrats Text */
@@ -33,7 +26,8 @@
       font-weight: bold;
       color: #ff007f;
       text-shadow: 0 0 30px #ff007f, 0 0 60px #ff00ff, 0 0 100px #ff00ff;
-      animation: popIn 1.5s ease-out, bounce 2s infinite alternate;
+      animation: popIn 1.5s ease-out, explode 1s ease-out forwards;
+      opacity: 0;
     }
 
     @keyframes popIn {
@@ -41,9 +35,9 @@
       100% { transform: scale(1); opacity: 1; }
     }
 
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
+    @keyframes explode {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3); opacity: 0; }
     }
 
     /* Text Sections */
@@ -55,14 +49,23 @@
       line-height: 2.5rem;
       border-top: 2px solid #6a00f4;
       border-bottom: 2px solid #6a00f4;
+      opacity: 0;
+      animation: typeEffect 2s steps(40) forwards;
     }
 
-    /* Question Dividers */
-    .divider {
-      width: 80%;
-      height: 2px;
-      background: linear-gradient(90deg, #ff007f, #00d4ff);
-      margin: 20px auto;
+    /* Animation for Typing Effect */
+    @keyframes typeEffect {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .section p {
+      font-family: 'Press Start 2P', cursive;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 4px solid #fff;
+      padding-right: 5px;
+      margin: 0;
     }
 
     /* Button Styling */
@@ -100,26 +103,82 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
+    /* Retro Effects for Text */
+    .retro-font {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      color: white;
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: radial-gradient(circle, #ff007f, #6a00f4, #00d4ff);
+      opacity: 0.6;
+      animation: sparkleEffect 1s infinite;
+    }
+
+    @keyframes sparkleEffect {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(0.8); opacity: 0.5; }
+    }
   </style>
 </head>
 <body>
+  <!-- Sparkles Animation -->
+  <div class="sparkle"></div>
+
   <!-- Congrats -->
-  <div class="congrats">🎉 Congrats on Your Purchase! 🎉</div>
+  <div class="congrats">🎊🎉 Congratulations! 🎉🎊</div>
 
   <!-- Image -->
   <img src="https://i.imgur.com/PdlumFr.png" alt="Retro Image" class="image">
 
   <!-- Sections for Text -->
-  <div class="section">
+  <div class="section retro-font">
     You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.
   </div>
-  <div class="divider"></div>
-  <div class="section">
+  <div class="section retro-font">
     WARNING ⚠️ This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!
   </div>
 
   <!-- Button -->
   <a href="https://zefoy.com" class="cool-button" target="_blank">Boost Your TikTok Engagement Now</a>
+
+  <!-- Instructions & Tips -->
+  <div class="section retro-font">
+    <strong>How to Use:</strong>
+    <p>Use this tool to get more engagement on your TikTok account. Simply access the link and follow the instructions to maximize your views and interactions.</p>
+  </div>
+
+  <div class="section retro-font">
+    <strong>3 Tips for Better Results:</strong>
+    <ul>
+      <li>Ensure your content is fresh and follows trending topics.</li>
+      <li>Engage actively with your audience to build relationships.</li>
+      <li>Use relevant hashtags and stay consistent with posting.</li>
+    </ul>
+  </div>
+
+  <div class="section retro-font">
+    <strong>Important!</strong>
+    <p>Use this tool responsibly and don't spam others. Your success depends on your strategy, so plan accordingly!</p>
+  </div>
+
+  <!-- Final Message -->
+  <div class="section retro-font">
+    <strong>Final Note:</strong>
+    <p>I’m all yours now, so use me carefully. Have a blast, and let's make some magic happen! ⚡🎮</p>
+  </div>
 
   <!-- JavaScript for Sparkles -->
   <script>
