@@ -3,154 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You Page</title>
-    <!-- Retro font -->
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"> 
-    
+    <title>Your Purchase Page</title>
     <style>
-        /* Global Styles */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Rock Salt', cursive;
             background-color: black;
-            overflow: hidden;
             color: white;
+            font-family: 'Arial', sans-serif;
         }
 
-        /* Simple sparkle effect on background */
-        @keyframes sparkle {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
-
-        .background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('https://i.imgur.com/PdlumFr.png') repeat;
-            background-size: 20px 20px;
-            animation: sparkle 1s infinite linear;
-            z-index: -1;
-        }
-
-        /* Text Styles */
-        h1, h2, h3, h4 {
+        .thank-you {
+            font-size: 36px;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
         }
 
-        h1 {
-            font-size: 60px;
-            color: #ff00ff; /* Purple */
+        .congratulations {
+            font-size: 48px;
+            text-align: center;
+            margin-top: 20px;
+            color: #ff00ff;
         }
 
-        h2 {
-            font-size: 80px;
-            color: #ff00ff; /* Purple */
+        .picture {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
         }
 
-        h3 {
-            font-size: 40px;
-            color: #ff66cc; /* Pink */
+        .phrase {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        h4 {
-            font-size: 30px;
-            color: #00bfff; /* Blue */
+        .warning {
+            font-size: 20px;
+            text-align: center;
+            color: red;
+            margin-top: 20px;
         }
 
-        /* Animation for text */
-        @keyframes textAnimation {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .way-of-use {
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
         }
 
-        .text-small {
+        .tips {
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .advice {
             font-size: 18px;
-            color: #a9a9a9; /* Grey */
             text-align: center;
+            margin-top: 20px;
         }
 
-        /* Button Styles */
-        .cool-button {
-            display: inline-block;
-            padding: 20px 40px;
-            background: linear-gradient(45deg, #ff00ff, #6a00f4, #00d4ff);
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
+        .button-container {
             text-align: center;
+            margin-top: 30px;
+        }
+
+        .cool-button {
+            padding: 12px 24px;
+            background-color: #8000ff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
             text-decoration: none;
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
-
-        .cool-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .cool-button:active {
-            transform: translateY(2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .stroke-text {
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-        }
-
     </style>
 </head>
 <body>
-    <!-- Background Sparkles -->
-    <div class="background"></div>
 
-    <!-- Content -->
-    <h1>Thank you for your purchase!</h1>
-    <h2>🎉 Congratulations! 🎉</h2>
-
-    <!-- Image Section -->
-    <div style="text-align: center;">
-        <img src="https://i.imgur.com/PdlumFr.png" alt="Image" width="400" height="400">
+    <div class="thank-you">
+        Thank you for your purchase. A world of possibilities is now in your hands.
     </div>
 
-    <!-- Motivational Phrase -->
-    <h3 class="stroke-text">This tool is yours for life. Unlock new opportunities!</h3>
+    <div class="congratulations">
+        🎉 Congratulations! 🎉
+    </div>
 
-    <!-- Warning -->
-    <h4>⚠️ Warning ⚠️</h4>
-    <p class="text-small">This tool wasn’t easy to acquire. Keep it secure—sharing it risks losing your investment.</p>
+    <img src="https://i.imgur.com/PdlumFr.png" alt="Image" class="picture">
 
-    <!-- How to Use -->
-    <h3>How to Use</h3>
-    <p>1. Access the tool via the provided link.</p>
-    <p>2. Select the action: boost views, shares, comments, likes, and more.</p>
-    <p>3. Enter your video link and wait for processing. Repeat as needed.</p>
+    <div class="phrase">
+        This tool is yours for life. It’s your ticket to unlocking new opportunities, so don't hold back.
+    </div>
 
-    <!-- Tips -->
-    <h3>Tips for Optimal Use</h3>
-    <p>• Consistency leads to better results.</p>
-    <p>• Follow all instructions for maximum effectiveness.</p>
-    <p>• Keep your access private to maintain its value.</p>
+    <div class="warning">
+        ⚠️ Warning: ⚠️
+        This tool wasn't easy to come by. You paid for it, and it’s exclusive to you. Sharing it with others means you risk losing your investment. Keep it private to maintain its value and your edge.
+    </div>
 
-    <!-- Motivational Advice -->
-    <h4 class="text-small">This is your advantage—use it wisely and make the most of it.</h4>
+    <div class="way-of-use">
+        <h3>How to Use</h3>
+        <p>Access the tool via the provided link.</p>
+        <p>Choose between boosting views, shares, likes, comments, and more.</p>
+        <p>Put your video link in the empty section and wait for a few minutes. Repeat as needed.</p>
+    </div>
 
-    <!-- Button -->
-    <div style="text-align: center;">
+    <div class="tips">
+        <h3>Tips for Better Use</h3>
+        <p>Consistency leads to better results.</p>
+        <p>Follow all instructions for maximum effectiveness.</p>
+        <p>Keep your access private.</p>
+    </div>
+
+    <div class="advice">
+        This is your advantage—use it wisely and make the most of it.
+    </div>
+
+    <div class="button-container">
         <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Your Engagement Now</a>
     </div>
+
 </body>
 </html>
