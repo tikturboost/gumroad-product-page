@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"> <!-- Retro font -->
-
+    <!-- Retro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"> 
+    
     <style>
+        /* Global Styles */
         body {
-            background-color: black;
-            color: white;
-            font-family: 'Rock Salt', cursive;
             margin: 0;
             padding: 0;
+            font-family: 'Rock Salt', cursive;
+            background-color: black;
             overflow: hidden;
-            position: relative;
+            color: white;
         }
 
-        /* Background sparkles */
+        /* Simple sparkle effect on background */
         @keyframes sparkle {
             0% { background-position: 0 0; }
             100% { background-position: 100% 100%; }
@@ -33,11 +34,10 @@
             z-index: -1;
         }
 
-        /* General Text Styles */
+        /* Text Styles */
         h1, h2, h3, h4 {
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            animation: textAnimation 1.5s ease-out forwards;
         }
 
         h1 {
@@ -60,7 +60,7 @@
             color: #00bfff; /* Blue */
         }
 
-        /* Animations for Text */
+        /* Animation for text */
         @keyframes textAnimation {
             0% {
                 opacity: 0;
@@ -91,7 +91,6 @@
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            transform: translateY(0);
             transition: all 0.3s ease-in-out;
         }
 
@@ -105,7 +104,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Text with borders for extra effect */
         .stroke-text {
             -webkit-background-clip: text;
             background-clip: text;
@@ -116,39 +114,43 @@
     </style>
 </head>
 <body>
-
+    <!-- Background Sparkles -->
     <div class="background"></div>
 
     <!-- Content -->
-    <h1>Thank you for your purchase</h1>
+    <h1>Thank you for your purchase!</h1>
     <h2>🎉 Congratulations! 🎉</h2>
-    
+
     <!-- Image Section -->
     <div style="text-align: center;">
         <img src="https://i.imgur.com/PdlumFr.png" alt="Image" width="400" height="400">
     </div>
 
+    <!-- Motivational Phrase -->
     <h3 class="stroke-text">This tool is yours for life. Unlock new opportunities!</h3>
 
+    <!-- Warning -->
     <h4>⚠️ Warning ⚠️</h4>
     <p class="text-small">This tool wasn’t easy to acquire. Keep it secure—sharing it risks losing your investment.</p>
 
+    <!-- How to Use -->
     <h3>How to Use</h3>
-    <p>Access the tool via the provided link.</p>
-    <p>Select your action: boosting views, shares, comments, likes, and more.</p>
-    <p>Enter your video link in the provided section, wait for processing, and repeat as needed.</p>
+    <p>1. Access the tool via the provided link.</p>
+    <p>2. Select the action: boost views, shares, comments, likes, and more.</p>
+    <p>3. Enter your video link and wait for processing. Repeat as needed.</p>
 
+    <!-- Tips -->
     <h3>Tips for Optimal Use</h3>
-    <p>Consistency leads to better results.</p>
-    <p>Follow all instructions for maximum effectiveness.</p>
-    <p>Keep your access private to maintain its value.</p>
+    <p>• Consistency leads to better results.</p>
+    <p>• Follow all instructions for maximum effectiveness.</p>
+    <p>• Keep your access private to maintain its value.</p>
 
-    <h3 class="text-small">This is your advantage—use it wisely and make the most of it.</h3>
+    <!-- Motivational Advice -->
+    <h4 class="text-small">This is your advantage—use it wisely and make the most of it.</h4>
 
     <!-- Button -->
     <div style="text-align: center;">
         <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Your Engagement Now</a>
     </div>
-
 </body>
 </html>
