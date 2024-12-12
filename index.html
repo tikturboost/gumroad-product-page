@@ -7,18 +7,36 @@
     <style>
         /* Custom Styling */
         body {
-            font-family: 'Brush Script MT', cursive;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Bubblier font */
             margin: 0;
             padding: 0;
-            background: black;
+            background: linear-gradient(to right, #9a4dff, #6b2eff, #1e0069); /* Purple gradient background */
             color: white;
             text-align: center;
             padding-top: 50px;
-            overflow: hidden; /* Ensure sparkles don't create scrollbars */
+            overflow-x: hidden; /* Ensure horizontal scroll doesn’t appear */
         }
 
         h1, h2, p {
             margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #f5b042;
+            text-shadow: 0 0 10px #ff7eb3;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #f5b042;
+            text-shadow: 0 0 10px #ff7eb3;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #6a85ff;
+            text-shadow: 0 0 8px #ff7eb3;
         }
 
         ul {
@@ -31,6 +49,7 @@
 
         li {
             margin: 10px 0;
+            font-size: 1.1em;
         }
 
         .cool-button {
@@ -96,6 +115,37 @@
             overflow: hidden;
             pointer-events: none;
         }
+
+        /* Robotic frame for the image */
+        .image-container {
+            display: inline-block;
+            padding: 20px;
+            border: 6px solid #6a00f4;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+
+        .warning-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff7eb3, #6a85ff);
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
+        .scrollable-content {
+            max-height: 600px;
+            overflow-y: auto;
+            margin-top: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -112,32 +162,35 @@
     <!-- Main Content -->
     <div class="congratulations-text">
         <h1>🎉 Congratulations 🎉</h1>
-        <img src="https://link-to-your-image.jpg" alt="Celebration Image" style="max-width: 600px; width: 100%; margin: 20px 0; border-radius: 12px;">
+        <div class="image-container">
+            <img src="https://i.imgur.com/PdlumFr.png" alt="Celebration Image" style="max-width: 600px; width: 100%; border-radius: 12px;">
+        </div>
         <p>Thank you for trusting us 💜 and purchasing this exclusive product!</p>
     </div>
-        <!-- Main Content Continued -->
-    <div class="tool-intro">
-        <p>You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.</p>
-        <p><strong style="background: linear-gradient(to right, #ff7eb3, #6a85ff); padding: 5px 10px; border-radius: 8px;">⚠️ WARNING ⚠️</strong> This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!</p>
-        <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Your Engagement Now</a>
-    </div>
-    <div class="tool-usage">
-        <h2 style="color: #f5b042; text-shadow: 0 0 10px #ff7eb3;">How to Use the Tool Effectively:</h2>
-        <ul>
-            <li>Access the Exclusive Link: Click on the link you’ve received to unlock your gateway to TikTok success.</li>
-            <li>Choose Your Desired Engagement Type: Decide what you want to boost: views, likes, shares, saves, or even comment likes. The choice is yours.</li>
-            <li>Enter Your TikTok Video Link: Paste the link of the video you wish to enhance into the designated field.</li>
-            <li>Start the Process: Hit the “Submit” or “Boost Now” button, and let the magic happen.</li>
-            <li>Witness the Results: In just a few moments, watch as your video’s engagement skyrockets to new heights.</li>
-        </ul>
-        <h3 style="color: #6a85ff; text-shadow: 0 0 8px #ff7eb3;">Pro Tips for Maximum Impact:</h3>
-        <ul>
-            <li>Use this tool strategically for your most valuable content.</li>
-            <li>Keep your usage balanced to maintain the authenticity of your growth.</li>
-            <li>Enjoy the competitive edge this exclusive tool provides!</li>
-        </ul>
-        <p style="font-size: 0.9em; color: #ccc;">Your TikTok growth journey starts now. Use it wisely, and make every interaction count.</p>
+
+    <div class="scrollable-content">
+        <div class="tool-intro">
+            <p>You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.</p>
+            <p><span class="warning-text">⚠️ WARNING ⚠️</span> This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!</p>
+            <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Your Engagement Now</a>
+        </div>
+        <div class="tool-usage">
+            <h2>How to Use the Tool Effectively:</h2>
+            <ul>
+                <li>Access the Exclusive Link: Click on the link you’ve received to unlock your gateway to TikTok success.</li>
+                <li>Choose Your Desired Engagement Type: Decide what you want to boost: views, likes, shares, saves, or even comment likes. The choice is yours.</li>
+                <li>Enter Your TikTok Video Link: Paste the link of the video you wish to enhance into the designated field.</li>
+                <li>Start the Process: Hit the “Submit” or “Boost Now” button, and let the magic happen.</li>
+                <li>Witness the Results: In just a few moments, watch as your video’s engagement skyrockets to new heights.</li>
+            </ul>
+            <h3>Pro Tips for Maximum Impact:</h3>
+            <ul>
+                <li>Use this tool strategically for your most valuable content.</li>
+                <li>Keep your usage balanced to maintain the authenticity of your growth.</li>
+                <li>Enjoy the competitive edge this exclusive tool provides!</li>
+            </ul>
+            <p style="font-size: 0.9em; color: #ccc;">Your TikTok growth journey starts now. Use it wisely, and make every interaction count.</p>
+        </div>
     </div>
 </body>
 </html>
-
