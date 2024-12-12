@@ -7,7 +7,7 @@
     <style>
         /* General Styling */
         body {
-            font-family: Verdana, sans-serif;
+            font-family: "Roboto", sans-serif;
             margin: 0;
             padding: 0;
             background-color: black;
@@ -16,17 +16,26 @@
             padding-top: 50px;
             overflow-y: auto; /* Enable vertical scrolling */
             height: 100vh;
-            position: relative;
         }
 
         h1, h2 {
             font-family: "Brush Script MT", cursive;
-            color: white;
             font-size: 50px;
-            text-shadow: 2px 2px 10px gray, 0 0 20px gray;
+            color: white;
+            text-shadow: 2px 2px 10px gray, 0 0 20px purple;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            font-family: "Brush Script MT", cursive;
+            font-size: 45px;
+            color: white;
+            text-shadow: 2px 2px 10px purple, 0 0 15px gray;
+            margin: 30px 0;
         }
 
         p {
+            font-family: "Roboto", sans-serif;
             color: white;
             font-size: 20px;
             line-height: 1.8;
@@ -53,27 +62,32 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://cdn.pixabay.com/photo/2017/11/30/12/16/sparkle-2994147_960_720.jpg') repeat;
-            opacity: 0.1;
+            background: url('https://i.imgur.com/vB7yN5F.png') repeat; /* Sparkles image */
+            opacity: 0.2;
             animation: sparkle 10s infinite;
             pointer-events: none;
         }
 
         @keyframes sparkle {
-            0%, 100% { opacity: 0.1; }
-            50% { opacity: 0.3; }
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.4; }
         }
 
-        /* Warning Styling */
-        .warning {
-            background: linear-gradient(45deg, #444, #666);
-            padding: 10px 20px;
-            border: 2px solid gray;
-            border-radius: 10px;
-            margin: 20px auto;
-            display: inline-block;
-            font-size: 20px;
-            text-shadow: 1px 1px 5px #999;
+        /* Picture Styling */
+        .picture {
+            display: block;
+            margin: 30px auto;
+            max-width: 80%;
+            border: 10px solid transparent;
+            border-image: linear-gradient(45deg, purple, pink) 1;
+            border-radius: 15px;
+            transition: transform 0.5s, box-shadow 0.5s;
+            box-shadow: 0 0 15px purple;
+        }
+
+        .picture:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px pink;
         }
 
         /* Button Styling */
@@ -103,18 +117,16 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Image Styling */
-        .picture {
-            display: block;
-            margin: 30px auto;
-            max-width: 80%;
-            border: 5px solid gray;
-            border-radius: 15px;
-            transition: transform 0.5s;
-        }
-
-        .picture:hover {
-            transform: scale(1.05);
+        /* Warning Styling */
+        .warning {
+            background: linear-gradient(45deg, #444, #666);
+            padding: 10px 20px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: inline-block;
+            font-size: 20px;
+            text-shadow: 1px 1px 5px #999;
         }
 
         /* Footer Text Styling */
@@ -141,7 +153,7 @@
     </div>
 
     <div class="tool-usage">
-        <h2>How to Use the Tool Effectively:</h2>
+        <h2 class="section-title">How to Use the Tool Effectively:</h2>
         <ul>
             <li>Access the Exclusive Link: Click on the link you’ve received to unlock your gateway to TikTok success.</li>
             <li>Choose Your Desired Engagement Type: Decide what you want to boost: views, likes, shares, saves, or even comment likes. The choice is yours.</li>
@@ -149,7 +161,7 @@
             <li>Start the Process: Hit the “Submit” or “Boost Now” button, and let the magic happen.</li>
             <li>Witness the Results: In just a few moments, watch as your video’s engagement skyrockets to new heights.</li>
         </ul>
-        <h3>Pro Tips for Maximum Impact:</h3>
+        <h3 class="section-title">Pro Tips for Maximum Impact:</h3>
         <ul>
             <li>Use this tool strategically for your most valuable content.</li>
             <li>Keep your usage balanced to maintain the authenticity of your growth.</li>
