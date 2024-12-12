@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Product Page</title>
     <style>
-        /* Custom Styling */
+        /* General Styling */
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif; /* Bubblier font */
             margin: 0;
@@ -14,10 +14,10 @@
             color: white;
             text-align: center;
             padding-top: 50px;
-            overflow-x: hidden; /* Ensure horizontal scroll doesn’t appear */
+            overflow-x: hidden;
         }
 
-        h1, h2, p {
+        h1, h2, h3, p {
             margin: 20px 0;
         }
 
@@ -59,54 +59,11 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
-            transform: translateY(0);
         }
 
         .cool-button:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .cool-button:active {
-            transform: translateY(2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .cool-button:focus {
-            outline: none;
-        }
-
-        /* Sparkle Effect */
-        @keyframes sparkle {
-            0%, 100% {
-                opacity: 0.2;
-                transform: translateY(0) scale(0.8);
-            }
-            50% {
-                opacity: 1;
-                transform: translateY(-10px) scale(1.2);
-            }
-        }
-
-        .sparkles {
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background-color: #ff00ff; /* Pinkish */
-            border-radius: 50%;
-            box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-            animation: sparkle 2s infinite ease-in-out;
-            pointer-events: none;
-        }
-
-        .sparkle-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
         }
 
         .image-container {
@@ -122,14 +79,16 @@
             transform: scale(1.05);
         }
 
-        .warning-text {
-            font-size: 1.2em;
-            font-weight: bold;
+        .warning-box {
+            display: inline-block;
             background: linear-gradient(to right, #ff7eb3, #6a85ff);
             color: white;
             padding: 10px 15px;
             border-radius: 8px;
-            display: inline-block;
+            margin: 10px auto;
+            font-size: 1.1em;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
         .warning-title {
@@ -146,14 +105,87 @@
             padding-left: 20px;
             font-size: 1.1em;
         }
+
+        .sparkles {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ff00ff; /* Pinkish */
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+            animation: sparkle 2s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0.2;
+                transform: translateY(0) scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1.2);
+            }
+        }
+
+        .sparkle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
     <!-- Sparkle Container -->
     <div class="sparkle-container">
-        <!-- Sparkle elements -->
+        <!-- Sparkles -->
         <div class="sparkles" style="top: 10%; left: 20%;"></div>
         <div class="sparkles" style="top: 30%; left: 50%;"></div>
         <div class="sparkles" style="top: 50%; left: 80%;"></div>
         <div class="sparkles" style="top: 70%; left: 10%;"></div>
-        <div class="sparkles" style="top: 90%; left: 60
+        <div class="sparkles" style="top: 90%; left: 60%;"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="congratulations-text">
+        <h1>🎉 Congratulations 🎉</h1>
+        <div class="image-container">
+            <img src="https://i.imgur.com/PdlumFr.png" alt="Celebration Image" style="max-width: 600px; width: 100%; border-radius: 12px;">
+        </div>
+        <p>Thank you for trusting us 💜 and purchasing this exclusive product!</p>
+    </div>
+
+    <div class="scrollable-content">
+        <div class="tool-intro">
+            <p>You now have access to a tool that will help you skyrocket your TikTok engagement with ease and professionalism.</p>
+            <div class="warning-box">
+                <div class="warning-title">⚠️ WARNING ⚠️</div>
+                <p>This link is yours for life. Keep it safe, as you've invested in it. Don't share it with others to maintain your competitive advantage!</p>
+            </div>
+            <a href="https://zefoy.com" class="cool-button" target="_blank">Start Boosting Your Engagement Now</a>
+        </div>
+
+        <div class="tool-usage">
+            <h2>How to Use the Tool Effectively:</h2>
+            <ul>
+                <li>Access the Exclusive Link: Click on the link you’ve received to unlock your gateway to TikTok success.</li>
+                <li>Choose Your Desired Engagement Type: Decide what you want to boost: views, likes, shares, saves, or even comment likes. The choice is yours.</li>
+                <li>Enter Your TikTok Video Link: Paste the link of the video you wish to enhance into the designated field.</li>
+                <li>Start the Process: Hit the “Submit” or “Boost Now” button, and let the magic happen.</li>
+                <li>Witness the Results: In just a few moments, watch as your video’s engagement skyrockets to new heights.</li>
+            </ul>
+            <h3>Pro Tips for Maximum Impact:</h3>
+            <ul>
+                <li>Use this tool strategically for your most valuable content.</li>
+                <li>Keep your usage balanced to maintain the authenticity of your growth.</li>
+                <li>Enjoy the competitive edge this exclusive tool provides!</li>
+            </ul>
+            <p style="font-size: 0.9em; color: #ccc;">Your TikTok growth journey starts now. Use it wisely, and make every interaction count.</p>
+        </div>
+    </div>
+</body>
+</html>
